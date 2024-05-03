@@ -20,14 +20,19 @@ public class LibraryManagementSystem {
 
         // Member borrows a book
         member1.borrowBook(book1, new String());
+        System.out.println();
         member1.borrowBook(book2, new String());
+        System.out.println();
 
         // Member try to borrow the same book again
         member1.borrowBook(book1, new String());
+        System.out.println();
 
         // Member returns a book
         member1.returnBook(book2);
+        System.out.println();
         
         member1.borrowBook(book2, new String());
+        System.out.println();
     }
 }
