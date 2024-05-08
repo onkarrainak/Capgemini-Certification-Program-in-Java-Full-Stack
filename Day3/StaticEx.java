@@ -1,3 +1,5 @@
+package onkar.Day3;
+
 class VariableDemo
 {
     static int count=0;
