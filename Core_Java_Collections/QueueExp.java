@@ -26,6 +26,10 @@ public class QueueExp {
 		int peeked = pq.peek();
 		System.out.println("Peeked element: " + peeked);
 		System.out.println("Elements after peek: " + pq);
+		
+		int head1 = pq.poll();
+		System.out.println("Removed element: " + head1);
+		System.out.println("Elements after removing head: " + pq);
 	}
 
 }
