@@ -1,6 +1,12 @@
 package onkar.Core_Java_Threadprogramming;
 
-import java.util.Scanner;
+import java.util.Random;
+
+class InsufficientFundsException extends Exception {
+    public InsufficientFundsException(String message) {
+        super(message);
+    }
+}
 
 class BankAccount {
     private double balance;
@@ -11,17 +17,17 @@ class BankAccount {
 
     public synchronized void deposit(double amount) {
         balance += amount;
-        System.out.println("Deposited: " + amount);
+        System.out.println(Thread.currentThread().getName() + " deposited: " + amount);
         System.out.println("Current Balance: " + balance);
     }
 
-    public synchronized void withdraw(double amount) {
+    public synchronized void withdraw(double amount) throws InsufficientFundsException {
         if (balance >= amount) {
             balance -= amount;
-            System.out.println("Withdrawn: " + amount);
+            System.out.println(Thread.currentThread().getName() + " withdrawn: " + amount);
             System.out.println("Current Balance: " + balance);
         } else {
-            System.out.println("Insufficient funds for withdrawal.");
+            throw new InsufficientFundsException(Thread.currentThread().getName() + " tried to withdraw but Insufficient funds.");
         }
     }
 
@@ -32,27 +38,26 @@ class BankAccount {
 
 public class BankExample {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to the Bank!");
-        System.out.println("Enter initial balance: ");
-        double initialBalance = scanner.nextDouble();
-        BankAccount account = new BankAccount(initialBalance);
+        BankAccount account = new BankAccount(1000);
 
-        System.out.println("Enter 'd' for deposit or 'w' for withdrawal: ");
-        char transactionType = scanner.next().charAt(0);
-        System.out.println("Enter amount: ");
-        double amount = scanner.nextDouble();
+        // Create multiple threads for deposit and withdrawal
+        Thread[] threads = new Thread[10];
+        Random random = new Random();
 
-        if (transactionType == 'd') {
-            Thread t1 = new Thread(() -> account.deposit(amount));
-            t1.start();
-        } else if (transactionType == 'w') {
-            Thread t2 = new Thread(() -> account.withdraw(amount));
-            t2.start();
-        } else {
-            System.out.println("Invalid transaction type.");
+        for (int i = 0; i < 10; i++) {
+            threads[i] = new Thread(() -> {
+                try {
+                    // Randomly decide whether to deposit or withdraw
+                    if (random.nextBoolean()) {
+                        account.deposit(random.nextDouble() * 100);
+                    } else {
+                        account.withdraw(random.nextDouble() * 100);
+                    }
+                } catch (InsufficientFundsException e) {
+                    System.out.println(e.getMessage());
+                }
+            });
+            threads[i].start();
         }
-
-        scanner.close();
     }
 }
