@@ -1,7 +1,7 @@
 package onkar.Core_Java_Java8;
 
 @FunctionalInterface
-interface Myinterface {
+interface Myinterface1 {
     int add(int a, int b);
 }
 @FunctionalInterface
@@ -15,7 +15,7 @@ interface ReverseString {
 public class LambdaWithParameter {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        Myinterface myinterface = (int a, int b) -> a + b;
+        Myinterface1 myinterface = (int a, int b) -> a + b;
         System.out.println("Addition is : " + myinterface.add(2, 3));
         MyinterfaceMul myInterface1 = (int a, int b) -> a * b;
         System.out.println("Multiplication is : " + myInterface1.mul(3, 3));
