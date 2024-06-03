@@ -16,10 +16,10 @@ public class CheckConnection {
         System.out.println("Database dbemp connection suceesfully establish");
         
         stmt=con.createStatement();//creating object for Statement
-        String s="insert into employee values(7,'Pooja',28,'pooja@gmail.com',40000,'Mumbai')";
+//        String s="insert into employee values(7,'Pooja',28,'pooja@gmail.com',40000,'Mumbai')";
 //        String s="update employee set emp_email ='akash@gmail.com' where emp_id=6";
 //        String s="delete from employee where emp_id = 5";
-        stmt.executeUpdate(s);
+//        stmt.executeUpdate(s);
         System.out.println("Execute Query");
         ResultSet rs = stmt.executeQuery("select * from employee");
         System.out.println("Get employee records:");
@@ -27,9 +27,10 @@ public class CheckConnection {
                 System.out.println("Employee ID:"+rs.getInt(1));
                 System.out.println("Employee name:"+rs.getString(2));
                 System.out.println("Employee age:"+rs.getInt(3));
-                System.out.println("Employee Email:"+rs.getString(3));
-                System.out.println("Employee salary :"+rs.getString(4));
-                System.out.println("Employee city :"+rs.getString(5));
+                System.out.println("Employee Email:"+rs.getString(4));
+                System.out.println("Employee salary :"+rs.getString(5));
+                System.out.println("Employee city :"+rs.getString(6));
+                System.out.println();
         }
         rs.close();
     }
