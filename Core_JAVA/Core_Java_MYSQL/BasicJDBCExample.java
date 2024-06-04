@@ -27,8 +27,10 @@ public class BasicJDBCExample {
             // 3. Create a statement
             statement = connection.createStatement();
             // 4. Execute a query
-            String s ="insert into student values(03,'Akash','BMC')";
-         
+//            String s = "insert into student values(04,'Akash','BMC')";
+            String s="update student set name ='Chaitanya' where rollno=4";
+            statement.executeUpdate(s);
+            System.out.println("Execute Query");
             String sql = "SELECT * FROM student";
             resultSet = statement.executeQuery(sql);
             
@@ -57,6 +59,6 @@ public class BasicJDBCExample {
                 e.printStackTrace();
             }
         }
-        System.out.println("Execute Query");
+        
     }
 }

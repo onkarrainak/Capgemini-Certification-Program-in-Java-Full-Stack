@@ -16,10 +16,10 @@ public class CheckConnection {
         System.out.println("Database dbemp connection suceesfully establish");
         
         stmt=con.createStatement();//creating object for Statement
-//        String s="insert into employee values(7,'Pooja',28,'pooja@gmail.com',40000,'Mumbai')";
+        String s="insert into employee values(8,'Vishal',25,'vishal@gmail.com',50000,'Mumbai')";
 //        String s="update employee set emp_email ='akash@gmail.com' where emp_id=6";
 //        String s="delete from employee where emp_id = 5";
-//        stmt.executeUpdate(s);
+        stmt.executeUpdate(s);
         System.out.println("Execute Query");
         ResultSet rs = stmt.executeQuery("select * from employee");
         System.out.println("Get employee records:");
