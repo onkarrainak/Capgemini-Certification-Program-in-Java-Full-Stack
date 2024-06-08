@@ -1,7 +1,7 @@
-"id";"name";"position"
-1;"Rainak";"Principal"
-2;"Patil";"Teacher"
-3;"Desai";"Teacher"
-4;"Modi";"Teacher"
-5;"Arora";"Teacher"
-6;"Onkar";"HOD"
+"id";"name";"position";"Salary"
+1;"Rainak";"Principal";80000.0
+2;"Patil";"Teacher";40000.0
+3;"Desai";"Teacher";40000.0
+4;"Modi";"Teacher";40000.0
+5;"Arora";"Teacher";40000.0
+6;"Onkar";"HOD";55000.0
