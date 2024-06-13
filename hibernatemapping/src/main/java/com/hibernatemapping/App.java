@@ -34,7 +34,7 @@ public class App {
 
 //		Delete
 		School b = new School();
-		b.setId(10);
+		b.setId(2);
 		s.delete(b);
 
 		Query q = s.createQuery("from School");
