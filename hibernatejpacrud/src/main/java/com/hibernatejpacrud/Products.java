@@ -16,6 +16,8 @@ public class Products {
 	public int getPid() {
 		return pid;
 	}
+	
+	// Getters and setters
 	public void setPid(int pid) {
 		this.pid = pid;
 	}
@@ -37,11 +39,14 @@ public class Products {
 		return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + "]";
 	}
 	
+	// Parameterized constructor
 	public Products(String pname, String price) {
 		super();
 		this.pname = pname;
 		this.price = price;
 	}
+	
+	 // Default constructor
 	public Products() {
 		// TODO Auto-generated constructor stub
 	}

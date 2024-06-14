@@ -31,25 +31,26 @@ public class JpaCrud {
         EntityManager entityManager = JpaUtil.getEntityManagerFactory().createEntityManager();
         entityManager.getTransaction().begin();
         Products Product = entityManager.find(Products.class, id);
-        System.out.println("Product id :: " + Product.getPid());
-        System.out.println("Product name :: " + Product.getPname());
-        System.out.println("Product Price :: " + Product.getPrice());
+        System.out.println("****************************");
+    	System.out.println(" Product id \t Product name \t Product Price");
+    	System.out.println("\t" + Product.getPid() + "\t" + Product.getPname() + "\t  " + Product.getPrice());
         entityManager.getTransaction().commit();
         entityManager.close();
         System.out.println("Record Successfully fetch from database");
     }
 	
-//	public void updateRecordById(int id, String name) {
-//        EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-//        entityManager.getTransaction().begin();
-//        Student student = entityManager.find(Student.class, id);
-//        student.setName(name);
-//        entityManager.getTransaction().commit();
-//        entityManager.close();
-//        System.out.println("Record updated Successfully into database");
-//    }
+	public void updateRecordById(int id, String name,String price) {
+        EntityManager entityManager = JpaUtil.getEntityManagerFactory().createEntityManager();
+        entityManager.getTransaction().begin();
+        Products Product = entityManager.find(Products.class, id);
+        Product.setPname(name);
+        Product.setPrice(price);
+        entityManager.getTransaction().commit();
+        entityManager.close();
+        System.out.println("Record updated Successfully into database");
+    }
 	
-	public void fetchAllRecords() {
+	public List<Products> fetchAllRecords() {
         EntityManager entityManager = JpaUtil.getEntityManagerFactory().createEntityManager();
         entityManager.getTransaction().begin();
         List<Products> ProductsList = new ArrayList<Products>();
@@ -58,9 +59,9 @@ public class JpaCrud {
             System.out.println("No Record Found");
         } else {
         	System.out.println("****************************");
-        	System.out.println(" Product id \t Product name \t Product Price");
-            for (Products student : ProductsList) {
-                System.out.println("\t" + student.getPid() + "\t" + student.getPname() + "\t  " + student.getPrice());
+        	System.out.println(" Product id \t c name \t Product Price");
+            for (Products product : ProductsList) {
+                System.out.println("\t" + product.getPid() + "\t" + product.getPname() + "\t  " + product.getPrice());
                 
                 
             }
@@ -69,6 +70,7 @@ public class JpaCrud {
         entityManager.getTransaction().commit();
         entityManager.close();
         System.out.println("Records Successfully fetch from database");
+		return ProductsList;
     }
 
 }
