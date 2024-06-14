@@ -74,14 +74,14 @@ public class App {
 
 	private static void updateUser(Scanner scanner) {
 		System.out.print("Enter product ID to update: ");
-//		jpaCrud.updateRecordById(14,"IPhone 13 plus","55000");
-        int id = scanner.nextInt();
-        System.out.print("Enter new name: ");
-        String name = scanner.nextLine();
-        scanner.nextLine();
-        System.out.print("Enter new price: ");
-        String price = scanner.next();
-		jpaCrud.updateRecordById(id,name,price);
+		jpaCrud.updateRecordById(14,"IPhone 13 plus","65000");
+//        int id = scanner.nextInt();
+//        System.out.print("Enter new name: ");
+//        String name = scanner.nextLine();
+//        scanner.nextLine();
+//        System.out.print("Enter new price: ");
+//        String price = scanner.next();
+//		jpaCrud.updateRecordById(id,name,price);
 		
 	}
 	

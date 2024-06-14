@@ -59,7 +59,7 @@ public class JpaCrud {
             System.out.println("No Record Found");
         } else {
         	System.out.println("****************************");
-        	System.out.println(" Product id \t c name \t Product Price");
+        	System.out.println(" Product id \t  name \t Product Price");
             for (Products product : ProductsList) {
                 System.out.println("\t" + product.getPid() + "\t" + product.getPname() + "\t  " + product.getPrice());
                 
