@@ -32,17 +32,29 @@ public class App {
 //		s.update(stu);
 //		System.out.println("Record Updated SuccessFully");
 
-//		Delete
-		School b = new School();
-		b.setId(2);
-		s.delete(b);
+////		Delete
+//		School b = new School();
+//		b.setId(2);
+//		s.delete(b);
 
 		Query q = s.createQuery("from School");
 		List<School> li = q.list();
 		for (School bk : li) {
 			System.out.println(bk);
 		}
+		
+		Query countQuery = s.createQuery("select count(*) from School");
+		Long count = (Long) countQuery.uniqueResult();
+		System.out.println("Total number of Student: " + count);
 		tr.commit();
-
-	}
+	}	
 }
+
+
+
+//Query groupByCityQuery = s.createQuery("select scity, count(*) from Student group by scity");
+//	List<Object[]> cityGroups = groupByCityQuery.list();
+//	System.out.println("Students grouped by city:");
+//	for (Object[] group : cityGroups) {
+//		System.out.println("City: " + group[0] + ", Count: " + group[1]);
+//	}
