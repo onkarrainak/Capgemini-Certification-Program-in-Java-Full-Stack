@@ -20,4 +20,17 @@ public class UserService {
         return userrepository.save(a);
     
     }
+	public void deleteUser(int userid) {
+		User user = userrepository.getById(userid);
+		this.userrepository.delete(user);	
+	}
+	public User updateUser(int userid, User user) {
+		user.setUserId(userid);
+		return userrepository.save(user);
+		
+	}
+	
+	public List<User> findByUserName(String fullName){
+		return userrepository.findByFullName(fullName);	
+		}
 }
