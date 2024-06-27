@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+
+    <style>
+        table,
+        tr,
+        td ,th{
+            border: 3px;
+            border-style: outset;
+            border-color: rgb(100, 100, 100);
+            border-collapse: collapse;
+            padding-left: 10px;       
+            
+        }
+       
+    </style>
+    <h4>Tables for student</h4>
+    <table>
+        <thead>student data</thead>
+        <colgroup></colgroup>
+        <tr>
+            <colgroup>
+            <td>ID </td>
+            <td>Name </td>
+            <td>Phone</td>
+            </colgroup>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Onkar</td>
+            <td>9404732100</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Sourabh</td>
+            <td>9451654450</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Sujay</td>
+            <td>9075770783</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Vishal</td>
+            <td>5154846548</td>
+        </tr>
+    </table>    
+    <tfoot>End</tfoot>
+
+    <table>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Id</th>
+          </tr>
+          <tr>
+            <td>Onkar</td>
+            <td>Rainak</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>onkar</td>
+            <td>rainak</td>
+            <td>1</td>
+          </tr>
+        </table>
+<tfoot>End </tfoot>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>onkar</td> <!-- This cell will take up space on two rows -->
+                <td rowspan="2">24</td>
+            </tr>
+            <tr>
+                <td>Onkar</td>
+                
+            </tr>
+            <tr>
+                <td>Sujay</td>
+                <td rowspan="4">22</td>
+            </tr>
+            <tr>
+                <td>Sourabh</td>
+            </tr>
+            <tr>
+                    <td>Vishal</td>
+            </tr>
+            <tr>
+                <td>Akash</td>
+            </tr>
+        </table>
+</body>
+</html>
