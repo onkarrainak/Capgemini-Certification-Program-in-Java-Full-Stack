@@ -13,10 +13,17 @@ body{
 }
 
 p{
-    line-height: 50px;
-    font-size: 40px;
-    color: black;
-
+    font-family: 'Verdana', sans-serif; /* Use a specific font from Google Fonts */
+        font-size: 20px; /* Adjust the font size */
+        line-height: 2; /* Set line height for better readability */
+        color: black; /* Change the text color */
+        margin: 1.5em 0; /* Adjust margin for spacing */
+        text-align: justify; /* Justify the text */
+        text-indent: 2em; /* Indent the first line of the paragraph */
+        font-style: italic;
+        max-width: 1000px; /* Limit the width of the paragraph for readability */
+        margin-left: auto; /* Center align the paragraph */
+        margin-right: auto; /* Center align the paragraph */
 }
 h1{
     padding: 3px;
