@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.video-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    display: contents;
+    margin: 0;
+    position:relative;
+    justify-content: center;
+    z-index: 1;
+    align-items:center;
+    height: 100px;
+    color: rgb(40, 39, 39);
+    text-align:center;
+    text-shadow: 2px 4px 2px rgba(130, 128, 128, 0.991);
+    font-size: 30px;
+
+   
+}
+
