@@ -4,7 +4,8 @@ public class ArrayBasic {
 	public static void main(String args[]) {
 		System.out.println("String Array :");
 		String str[] = { "ONKAR", "RAINAK", "KOLHAPUR" };
-		for (int i = 0; i < str.length; i++) {
+		int i = 0;
+		for ( ; i < str.length; i++) {
 			System.out.print(str[i] + " ");
 		}
 		
