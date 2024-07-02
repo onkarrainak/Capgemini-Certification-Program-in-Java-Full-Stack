@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang "en">
+<head>
+    <style>
+        p{
+            color:rgb(116, 111, 108);
+            
+        }
+    </style>
+    <script>
+        function showGreetings() {
+            var firstName = document.getElementById("first").value;
+            var lastName = document.getElementById("second").value;
+            var greetingMessage = "Hello " + lastName + " " + firstName;
+            document.getElementById("btn").innerText = greetingMessage;
+        }
+    </script>
+</head>
+<body>
+    First Name: <input id="first">
+    Last Name: <input id="second">
+    <button onclick="showGreetings()">Get</button>
+    <!-- <button onclick="showGreeting()">Show</button> -->
+   <h1><p id="btn"></p></h1> 
+</body>
+</html>

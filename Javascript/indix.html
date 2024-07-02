@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW JS</title>
+</head>
+<body>
+    <script>
+        let num = 10; //int a=10;
+       let str = "Onkar"; 
+        let bool = true; 
+        let b;
+        console.log(typeof(num));
+        console.log(typeof(str));
+        document.write(typeof(bool));
+        document.write(b+"<br>");
+        
+        let z = 13;
+
+if(true){
+   let z = "Fun"; //works without any error as scope is different.
+   console.log(z) //prints "Fun"
+}
+console.log(z) //prints 13
+document.write(typeof(z));
+console.log(z) //prints 13
+
+for (var i = 0; i < 3; i++) {
+  console.log(i);
+}
+console.log("****"+i);
+    
+    </script>
+</body>
+</html>

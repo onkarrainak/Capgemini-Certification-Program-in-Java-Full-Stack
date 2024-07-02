@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+        function add() {
+            var num1,num2, add;
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);       
+            add = num1 + num2;
+            document.getElementById("answer").value = add;
+        }
+    </script>
+</head>
+
+
+<body>
+    Enter Num1: <input id="num1" type="number">
+    Enter Num2: <input id="num2" type="number">
+    <button onclick="add()">add</button>
+    <input id="answer">
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function add() {
+            var num1,num2,sum;
+             num1 = Number(document.getElementById("num1").value);
+             num2 = Number(document.getElementById("num2").value);
+             sum = num1 + num2;
+            document.getElementById("answer").value = sum;
+        }
+    </script>
+</head>
+<body>
+    Enter Num1: <input id="num1" type="number">
+    Enter Num2: <input id="num2" type="number">
+    <button onclick="add()">Add</button>
+    <input id="answer" >
+</body>
+</html> -->

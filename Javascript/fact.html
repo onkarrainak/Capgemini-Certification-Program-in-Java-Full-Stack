@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<script>
+    function show() {
+        var i, no, fact;
+        fact = 1;
+        no = Number(document.getElementById("num").value);
+        //no=(document.getElementById("num").value);
+        alert(typeof (no))
+        for (i = 1; i <= no; i++) {
+            fact = fact * i;
+        }
+        document.getElementById("answer").value = fact;
+    }
+</script>
+</head>
+
+<body>
+    Enter Num: <input id="num">
+    <button onclick="show()">Factorial</button>
+    <input id="answer">
+</body>
+
+</html>
